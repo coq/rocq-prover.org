@@ -130,34 +130,6 @@ in
     </div>
 % | None -> () );
 </div>
-<div class="w-full pkg-section-mild-contrast dark:dark-no-mild-contrast">
-    <div class="container-fluid pt-6 pb-12">
-        <p class="uppercase text-sm text-content dark:text-dark-content tracking-widest font-medium mb-2">stable ecosystem</p>
-        <h2 class="font-bold text-2xl text-title dark:text-dark-title mb-2">Focus on Your Code and Formal Artifacts, opam Takes Care of Distributing Them</h2>
-        <p class="text-xl text-content dark:text-dark-content mb-12">Our users have the highest standards for the OCaml and Rocq ecosystems to run
-            mission-critical applications across a variety of operating systems and to maintain consistency of Rocq formal artifacts. 
-            They expect that a package that compiles today will still work a decade from now</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="text-left flex flex-col">
-                <div class="flex md:pr-28 md:h-36"><%s! Icons.beaker_bubble "text-content dark:text-dark-content mb-6 mx-auto" %></div>
-                <h3 class="text-2xl text-title dark:text-dark-title font-semibold mb-2">Continuous Integration</h3>
-                <p class="text-base text-content dark:text-dark-content">Before any package update, we run sandboxed matrix builds for
-                    boundaries of the dependencies and for each of the dependent packages. A package publication will
-                    never break the rest of the ecosystem.</p>
-            </div>
-            <div class="text-left flex flex-col">
-                <div class="flex md:pr-28 md:h-36"><%s! Icons.refresh_bubble "text-content dark:text-dark-content mb-6 mx-auto" %></div>
-                <h3 class="text-2xl text-title dark:text-dark-title font-semibold mb-2">State of the Art</h3>
-                <p class="text-base text-content dark:text-dark-content">Opam supports publishing multiple versions of packages simultaneously to specify the version constraints, so only compatible revisions are chosen for a build. It comes with a performant constraint solver, a flexible CLI, a well-specified metadata format, and an easy access to the package manager logic via OCaml libraries.</p>
-            </div>
-            <div class="text-left flex flex-col">
-                <div class="flex md:pr-28 md:h-36"><%s! Icons.sheild_bubble "text-content dark:text-dark-content mb-6 mx-auto" %></div>
-                <h3 class="text-2xl text-title dark:text-dark-title font-semibold mb-2">Package Stability</h3>
-                <p class="text-base text-content dark:text-dark-content">The opam project and package repository is maintained by a team of developers who ensure that everything is not only running smoothly, but also curated to maintain a high degree of metadata quality. This makes it one of the most stable package repositories available today.</p>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="w-full section-blue-gradient dark:dark-section-blue-gradient">
     <div class="container-fluid flex items-center justify-between py-7 px-8">
         <div class="flex flex-col w-full md:max-w-[50%]">
