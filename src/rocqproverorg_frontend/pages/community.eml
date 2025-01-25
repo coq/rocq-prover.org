@@ -23,11 +23,17 @@ Community_layout.single_column_layout
           <div class="md:flex-grow">
               <h1 class="text-title dark:text-dark-title text-2xl md:text-5xl tracking-wider">The Rocq Community</h1>
                 <p class="text-content dark:text-dark-content text-lg my-4 md:my-6 max-w-[80%]">
-                 Explore events, community blogs, mailing lists, and more to connect with fellow enthusiasts!
+                 Explore events, community blogs, discussion forums, and more to connect with fellow enthusiasts!
               </p>
-              <div class="md:flex-row flex-col flex w-full md:max-w-[70%]">
+              <div class="lg:flex-row flex-col flex w-full md:max-w-[70%]">
                <div class="flex lg:flex-row mt-8 mr-4">
-                <%s!  Hero_section.hero_button ~left_icon:(Icons.zulip "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Meet</b>") ~text:("With the Community") ~href:("https://coq.zulipchat.com/") "" %>
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.zulip "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<strong>Chat</strong> on") ~text:("Zulip") ~href:("https://coq.zulipchat.com/") "" %>
+               </div>
+               <div class="flex lg:flex-row mt-8 mr-4">
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.discourse "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<strong>Share announcements</strong> on") ~text:("Discourse") ~href:("https://coq.zulipchat.com/") "" %>
+               </div>
+               <div class="flex lg:flex-row mt-8 mr-4">
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.discourse "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<strong>Collaborate</strong> in") ~text:("Rocq-community") ~href:("https://github.com/coq-community/manifesto") "" %>
                </div>
                <!-- <div class="flex lg:flex-row mt-8 mr-4">
                 <%s!  Hero_section.hero_button ~left_icon:(Icons.peertube "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Watch</b>") ~text:("Rocq Videos") ~href:("https://watch.ocaml.org/") "" %>
@@ -44,14 +50,15 @@ Community_layout.single_column_layout
       <p class="text-content dark:text-dark-content mt-4 mb-6">Ask and answer questions, share and discuss Rocq-related articles and posts, let people know about your projects and find collaborators</p>
       <ul>
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Discussion</p>
-        <%s! social_list_item ~text:("Meet developers and users for discussions, technical questions, collaborative projects and news - ") ~href:("https://coq.zulipchat.com") ~left_icon:(Icons.zulip "w-10 h-10") ~title:("Zulip") "" %>
-        <%s! social_list_item ~text:("Discuss with the community, ask questions and share your work on Rocq - ") ~href:("https://coq.discourse.group/") ~left_icon:(Icons.discourse "w-10 h-10") ~title:("Discourse") "" %>
+        <%s! social_list_item ~text:("Casual and high traffic discussions on the Rocq Prover, and ecosystem projects - ") ~href:("https://coq.zulipchat.com") ~left_icon:(Icons.zulip "w-10 h-10") ~title:("Zulip") "" %>
+        <%s! social_list_item ~text:("Anouncements and questions in English, Chinese, Spanish, French, German and Russian - ") ~href:("https://coq.discourse.group/") ~left_icon:(Icons.discourse "w-10 h-10") ~title:("Discourse") "" %>
         <%s! social_list_item ~text:("Ask and help answer Rocq questions - ") ~href:("https://proofassistants.stackexchange.com/questions/tagged/coq") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Proof Assistants Stack Exchange") "" %>
+        <%s! social_list_item ~text:("Follow Rocq questions accross all Stack Exchange sites with this RSS feed - ") ~href:("https://stackexchange.com/filters/299857/questions-tagged-coq-on-stackexchange-sites") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Stack Overflow and other Stack Exchange sites") "" %>
       </ul>
       <ul>
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Development</p>
         <%s! social_list_item ~text:("Submit bug reports and feature requests for the Rocq Prover - ") ~href:("https://github.com/rocq-prover/rocq/issues") ~left_icon:(Icons.github "w-10 h-10") ~title:("GitHub") "" %>
-        <%s! social_list_item ~text:("Ask and help answer Rocq questions - ") ~href:("https://stackoverflow.com/questions/tagged/coq") ~left_icon:(Icons.stackoverflow "w-10 h-10") ~title:("Stack Overflow") "" %>        
+        <%s! social_list_item ~text:("Participate in the collaborative maintenance of ecosystem packages - ") ~href:("https://github.com/coq-community/manifesto") ~left_icon:(Icons.github "w-10 h-10") ~title:("Rocq-community") "" %>
       </ul>
       <!-- 
       <ul>
