@@ -1,3 +1,130 @@
+let filter_tags (papers : Data.Paper.t list) (tags : string list) = 
+    List.filter (fun (paper : Data.Paper.t) ->
+        List.exists (fun tag -> List.mem tag paper.tags) tags
+    ) papers
+
+let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list) 
+    (papers : Data.Paper.t list) (cat : string) =
+    <div class="section-blue-gradient dark:dark-section-blue-gradient lg:py-12 py-8">
+        <div class="container-fluid">
+            <div class=" ">
+                <div class="">
+                    <h2 class="font-bold text-white dark:text-dark-title mb-8"><%s cat %></h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                    <% recommended_papers |> List.iter (fun (paper : Data.Paper.t) -> %>
+                        <a href="<%s paper.links |> List.hd |> (fun x -> x.uri) %>" class="flex-1 p-6 pb-4 rounded-xl bg-white card dark:dark-card">
+                            <div class="font-semibold text-base mb-3 text-title dark:text-dark-title">
+                                <%s paper.title %>
+                            </div>
+                            <div class="truncate text-content dark:text-dark-content">
+                                <%s paper.abstract %>
+                            </div>
+                            <div class="text-sm mt-3 text-content dark:text-dark-content">
+                                <%s String.concat ", " paper.authors %>
+                            </div>
+                            <div class="flex mt-5 flex-wrap">
+                                <% paper.tags |> List.iter (fun (tag : string) -> %>
+                                <div
+                                    class="tag">
+                                    <%s tag %>
+                                </div>
+                                <% ); %>
+                            </div>
+                        </a>
+                        <% ); %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-background dark:bg-dark-background">
+        <div class="py-10 lg:py-28">
+            <div class="container-fluid">
+                <div class="flex justify-between items-center flex-col md:flex-row">
+                    <% let paper_num = match List.length papers with 0 -> "No Paper" | 1 -> "1 Paper" | l -> Printf.sprintf "%i Papers" l in %>
+                    <h5 class="font-bold text-title dark:text-dark-title mb-5 md:mb-0"><%s paper_num %></h5>
+                    <form action="<%s Url.papers %>" method="GET">
+                        <%s! Forms.search_input
+                            ~name:"q"
+                            ~label:"Search for a paper"
+                            ~button_attrs:{|type="submit"|}
+                            ~input_attrs:("value=\"" ^ Dream.html_escape search ^ "\"")
+                            ""
+                            %>
+                    </form>
+                </div>
+                <div class="overflow-x-scroll lg:overflow-hidden mt-5 lg:mt-10">
+                    <% (match List.length papers with | 0 -> %>
+                    <div class="flex flex-col items-center justify-center pt-24 space-y-4 text-content">
+                        <div>
+                            <%s! Icons.magnifying_glass "h-10 w-10" %>
+                        </div>
+                        <div class="text-xl">No Papers found matching "<%s search %>"</div>
+                    </div>
+                    <% | _ -> %>
+                    <table class="max-w-5xl lg:max-w-full align-top block lg:table">
+                        <thead class="hidden lg:table-header text-title dark:text-dark-title text-left rounded-xl">
+                            <tr>
+                                <th class="py-4 px-6 rounded-l-lg text-x w-2/5">Title</th>
+                                <th class="py-4 px-6">Years</th>
+                                <th class="py-4 px-6 w-40">Tags</th>
+                                <th class="py-4 px-6 w-56">Authors</th>
+                            </tr>
+                        </thead>
+                        <tbody class="block ">
+                            <% papers |> List.iter (fun (paper : Data.Paper.t) -> %>
+                                <tr class="align-top flex flex-row pb-3 mb-4 lg:mb-0 border-b  dark:border-b-dark-separator_30">
+                                    <td class="py-0 lg:py-4 px-6 font-semibold w-[40%]">
+                                        <div class="text-xl text-title dark:text-dark-title lg:text-base font-semibold">
+                                        <a href="<%s "/papers/" ^ paper.slug %>"><%s paper.title %></a>
+                                        </div>
+                                        <div class="font-normal text-sm mt-2 text-content dark:text-dark-content">
+                                            <%s paper.abstract %>
+                                        </div>
+                                        <div class="font-normal text-sm mt-2 text-content dark:text-dark-content">
+                                        <% paper.links |> List.iter (fun (link : Data.Paper.link) -> %>
+                                        <a href="<%s link.uri %>" class="text-sm flex flex-col gap-1 mr-2 mb-2 border-2 rounded-md px-4 py-2 bg-white dark:bg-dark-card hover:border-primary dark:hover-dark-border-primary hover:ring-2 hover:ring-primary_nav_block_hover_10 dark:hover:ring-dark-primary_nav_block_hover_10 w-max">
+                                            <div class="flex gap-4 items-center">
+                                            <%s! Icons.papers "h-5 w-5 text-primary dark:text-dark-primary" %>
+                                            <div class="text-primary dark:text-dark-primary font-normal whitespace-nowrap"><%s link.description %></div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-dark-primary" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                            </svg>
+                                            </div>
+                                        </a>
+                                        <% ); %>
+                                        </div>
+                                    </td>
+                                    <td class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
+                                        <%i paper.year %>
+                                    </td>
+                                    <td class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title w-[30%]">
+                                        <div class="flex flex-wrap">
+                                            <% paper.tags |> List.iter (fun (tag : string) -> %>
+                                                <div
+                                                    class="tag">
+                                                    <%s tag %>
+                                                </div>
+                                                <% ); %>
+                                        </div>
+                                    </td>
+                                    <td class="align-top dark:text-dark-title font-medium lg:py-4 min-w-max pt-4 px-6 text-title w-[20%]">
+                                        <% paper.authors |> List.iter (fun (author) -> %>
+                                        <li><%s author %></li>
+                                            <% ); %>
+                                    </td>
+                                </tr>
+                                <% ); %>
+                        </tbody>
+                    </table>
+                    <% ); %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 let render ?(search = "") ~(recommended_papers : Data.Paper.t list) (papers : Data.Paper.t list) =
 Learn_layout.single_column_layout
 ~title:"Rocq Papers"
@@ -17,120 +144,9 @@ Learn_layout.single_column_layout
         </div>
     </div>
 </div>
-<div class="section-blue-gradient dark:dark-section-blue-gradient lg:py-12 py-8">
-    <div class="container-fluid">
-        <div class=" ">
-            <div class="">
-                <h2 class="font-bold text-white dark:text-dark-title mb-8">Recommended Papers</h2>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                <% recommended_papers |> List.iter (fun (paper : Data.Paper.t) -> %>
-                    <a href="<%s paper.links |> List.hd |> (fun x -> x.uri) %>" class="flex-1 p-6 pb-4 rounded-xl bg-white card dark:dark-card">
-                        <div class="font-semibold text-base mb-3 text-title dark:text-dark-title">
-                            <%s paper.title %>
-                        </div>
-                        <div class="truncate text-content dark:text-dark-content">
-                            <%s paper.abstract %>
-                        </div>
-                        <div class="text-sm mt-3 text-content dark:text-dark-content">
-                            <%s String.concat ", " paper.authors %>
-                        </div>
-                        <div class="flex mt-5 flex-wrap">
-                            <% paper.tags |> List.iter (fun (tag : string) -> %>
-                            <div
-                                class="tag">
-                                <%s tag %>
-                            </div>
-                            <% ); %>
-                        </div>
-                    </a>
-                    <% ); %>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-background dark:bg-dark-background">
-    <div class="py-10 lg:py-28">
-        <div class="container-fluid">
-            <div class="flex justify-between items-center flex-col md:flex-row">
-                <% let paper_num = match List.length papers with 0 -> "No Paper" | 1 -> "1 Paper" | l -> Printf.sprintf "%i Papers" l in %>
-                <h5 class="font-bold text-title dark:text-dark-title mb-5 md:mb-0"><%s paper_num %></h5>
-                <form action="<%s Url.papers %>" method="GET">
-                    <%s! Forms.search_input
-                        ~name:"q"
-                        ~label:"Search for a paper"
-                        ~button_attrs:{|type="submit"|}
-                        ~input_attrs:("value=\"" ^ Dream.html_escape search ^ "\"")
-                        ""
-                        %>
-                </form>
-            </div>
-            <div class="overflow-x-scroll lg:overflow-hidden mt-5 lg:mt-10">
-                <% (match List.length papers with | 0 -> %>
-                <div class="flex flex-col items-center justify-center pt-24 space-y-4 text-content">
-                    <div>
-                        <%s! Icons.magnifying_glass "h-10 w-10" %>
-                    </div>
-                    <div class="text-xl">No Papers found matching "<%s search %>"</div>
-                </div>
-                <% | _ -> %>
-                <table class="max-w-5xl lg:max-w-full align-top block lg:table">
-                    <thead class="hidden lg:table-header text-title dark:text-dark-title text-left rounded-xl">
-                        <tr>
-                            <th class="py-4 px-6 rounded-l-lg text-x w-2/5">Title</th>
-                            <th class="py-4 px-6">Years</th>
-                            <th class="py-4 px-6 w-40">Tags</th>
-                            <th class="py-4 px-6 w-56">Authors</th>
-                        </tr>
-                    </thead>
-                    <tbody class="block ">
-                        <% papers |> List.iter (fun (paper : Data.Paper.t) -> %>
-                            <tr class="align-top flex flex-row pb-3 mb-4 lg:mb-0 border-b  dark:border-b-dark-separator_30">
-                                <td class="py-0 lg:py-4 px-6 font-semibold w-[40%]">
-                                    <div class="text-xl text-title dark:text-dark-title lg:text-base font-semibold">
-                                      <a href="<%s "/papers/" ^ paper.slug %>"><%s paper.title %></a>
-                                    </div>
-                                    <div class="font-normal text-sm mt-2 text-content dark:text-dark-content">
-                                        <%s paper.abstract %>
-                                    </div>
-                                    <div class="font-normal text-sm mt-2 text-content dark:text-dark-content">
-                                    <% paper.links |> List.iter (fun (link : Data.Paper.link) -> %>
-                                    <a href="<%s link.uri %>" class="text-sm flex flex-col gap-1 mr-2 mb-2 border-2 rounded-md px-4 py-2 bg-white dark:bg-dark-card hover:border-primary dark:hover-dark-border-primary hover:ring-2 hover:ring-primary_nav_block_hover_10 dark:hover:ring-dark-primary_nav_block_hover_10 w-max">
-                                        <div class="flex gap-4 items-center">
-                                          <%s! Icons.papers "h-5 w-5 text-primary dark:text-dark-primary" %>
-                                          <div class="text-primary dark:text-dark-primary font-normal whitespace-nowrap"><%s link.description %></div>
-                                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary dark:text-dark-primary" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                                          </svg>
-                                        </div>
-                                      </a>
-                                    <% ); %>
-                                    </div>
-                                </td>
-                                <td class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title">
-                                    <%i paper.year %>
-                                </td>
-                                <td class="pt-4 lg:py-4 px-6 font-medium align-top text-title dark:text-dark-title w-[30%]">
-                                    <div class="flex flex-wrap">
-                                        <% paper.tags |> List.iter (fun (tag : string) -> %>
-                                            <div
-                                                class="tag">
-                                                <%s tag %>
-                                            </div>
-                                            <% ); %>
-                                    </div>
-                                </td>
-                                <td class="align-top dark:text-dark-title font-medium lg:py-4 min-w-max pt-4 px-6 text-title w-[20%]">
-                                    <% paper.authors |> List.iter (fun (author) -> %>
-                                    <li><%s author %></li>
-                                        <% ); %>
-                                </td>
-                            </tr>
-                            <% ); %>
-                    </tbody>
-                </table>
-                <% ); %>
-            </div>
-        </div>
-    </div>
-</div>
+<%s! let tags = ["Theory and Implementation of Rocq"] in 
+     let recommended_papers = filter_tags recommended_papers tags in 
+     let papers = filter_tags papers tags in 
+     display_papers ~search ~recommended_papers papers 
+        "Theory and Implementation of Rocq"  
+%>
