@@ -37,6 +37,11 @@ let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list)
             </div>
         </div>
     </div>
+    <details>
+    <summary style="font-size: 1.6em; font-weight: normal; float: left; margin-left: 5em; margin-bottom:1em">
+            More Papers
+    </summary>
+    <div style="clear: both;"></div>
     <div class="bg-background dark:bg-dark-background">
         <div class="py-10 lg:py-28">
             <div class="container-fluid">
@@ -122,6 +127,8 @@ let display_papers ~(search : string) ~(recommended_papers : Data.Paper.t list)
             </div>
         </div>
     </div>
+    </details>
+    <div style="clear: both;"></div>
 
 
 
