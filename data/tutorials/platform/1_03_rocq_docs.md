@@ -28,3 +28,7 @@ function and its associated elimination principle.
     version](https://coq.inria.fr/platform-docs/Tutorial_Equations_wf.html)
     and [source
     code](https://coq.inria.fr/platform-docs/Tutorial_Equations_wf.v)
+-   Equations and Indexed inductive types, and tactics [interactive
+    version](https://coq.inria.fr/platform-docs/Tutorial_Equations_indexed.html)
+    and [source
+    code](https://coq.inria.fr/platform-docs/Tutorial_Equations_indexed.v)
