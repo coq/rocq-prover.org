@@ -1,10 +1,10 @@
 @layer components {
   .btn {
-    @apply rounded-full bg-primary border border-primary font-normal text-lg text-white whitespace-nowrap transition-colors inline-flex items-center justify-center space-x-3 dark:border-dark-primary dark:bg-dark-primary dark:text-dark-white;
+    @apply rounded-full bg-primary border border-primary font-normal text-lg py-3 md:py-3 text-white lg:whitespace-nowrap transition-colors inline-flex items-center justify-center space-x-3 dark:border-dark-primary dark:bg-dark-primary dark:text-dark-white;
   }
 
   .btn {
-    @apply px-7 h-11;
+    @apply px-7 lg:h-11 h-auto;
   }
 
   .btn-lg {
