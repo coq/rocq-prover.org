@@ -43,11 +43,13 @@ papers:
       - Théo Zimmermann
     year: 2024
     tags:
+      - Theory and Implementation of Rocq
       - Release
     links:
       - description: "Zenodo"
         uri: "https://zenodo.org/records/14542673"
     featured: true
+
   - title: "Verified Extraction from Coq to OCaml"
     publication: Programming Language Design and Implementation (PLDI)
     abstract: >
@@ -57,6 +59,7 @@ papers:
       - Matthieu Sozeau
       - Nicolas Tabareau 
     tags:
+      - Theory and Implementation of Rocq
       - PLDI
       - extraction
     year: 2024
@@ -68,6 +71,7 @@ papers:
       - description: "PLDI Talk"
         uri: "https://youtu.be/RBU3dkSv7rg?list=PLyrlk8Xaylp6XYPbTIscsn49yFEFlxUp-&t=11946"
     featured: true
+
   - title: "Correct and Complete Type Checking and Certified Erasure for Coq, in Coq"
     publication: Journal of the ACM
     abstract: >
@@ -80,6 +84,7 @@ papers:
       - Nicolas Tabareau
       - Théo Winterhalter
     tags:
+      - Theory and Implementation of Rocq
       - JACM
       - type-checker
     year: 2024
@@ -89,6 +94,7 @@ papers:
       - description: "HAL-Inria"
         uri: https://inria.hal.science/hal-04077552
     featured: true
+
   - title: "Trocq: Proof Transfer for Free, With or Without Univalence"
     publication: European Symposium on Programming
     abstract: >
@@ -98,6 +104,7 @@ papers:
       - Enzo Crance
       - Assia Mahboubi
     tags:
+      - Theory and Implementation of Rocq
       - ESOP
       - Proof Transfer
     year: 2024
@@ -105,6 +112,7 @@ papers:
       - description: "HAL-Inria"
         uri: https://inria.hal.science/hal-04177913v5
     featured: true
+
   - title: "Proof Repair across Type Equivalences"
     publication: Programming Language Design and Implementation (PLDI)
     abstract: >
@@ -117,6 +125,7 @@ papers:
       - John Leo
       - Dan Grossman
     tags:
+      - Theory and Implementation of Rocq
       - PLDI
       - proof repair
     year: 2021
@@ -128,6 +137,7 @@ papers:
       - description: "PLDI Talk"
         uri: https://youtu.be/zG-Jc62WqFk?si=47mUgl_-RgvIGE71
     featured: no
+
   - title: "Equations Reloaded: High-Level Dependently-Typed Functional Programming and Proving in Coq"
     publication: International Conference on Functional Programming (ICFP)
     abstract: >
@@ -136,6 +146,7 @@ papers:
       - Matthieu Sozeau
       - Cyprien Mangin
     tags:
+      - Theory and Implementation of Rocq
       - ICFP
       - Dependent pattern-matching
     year: 2019
@@ -145,6 +156,7 @@ papers:
       - description: "Download PDF on Arxiv"
         uri: https://arxiv.org/abs/2010.00774
     featured: no
+
   - title: "Definitional Proof-Irrelevance without K"
     publication: Principles of Programming Languages (POPL)
     abstract: >
@@ -155,6 +167,7 @@ papers:
       - Matthieu Sozeau
       - Nicolas Tabareau
     tags:
+      - Theory and Implementation of Rocq
       - POPL
       - Proof-Irrelevance
     year: 2019
@@ -164,6 +177,7 @@ papers:
       - description: "HAL-Inria"
         uri: https://inria.hal.science/hal-01859964
     featured: no
+
   - title: "Inductive Definitions in the System Coq - Rules and Properties"
     publication: Typed Lambda Calculi and Applications (TLCA)
     abstract: >
@@ -171,6 +185,7 @@ papers:
     authors:
       - Christine Paulin-Mohring
     tags:
+      - Theory and Implementation of Rocq
       - TLCA
       - Inductive types
     year: 1993
@@ -178,6 +193,7 @@ papers:
       - description: "DOI"
         uri: https://doi.org/10.1007/BFb0037116
     featured: no
+
   - title: "Inductively Defined Types"
     publication: International Conference on Computer Logic
     year: 1988
@@ -186,6 +202,7 @@ papers:
       - Thierry Coquand
       - Christine Paulin-Mohring
     tags:
+      - Theory and Implementation of Rocq
       - Inductive types
     links:
       - description: "DOI"
@@ -193,6 +210,7 @@ papers:
       - description: "Springer"
         uri: https://link.springer.com/content/pdf/10.1007/3-540-52335-9_47.pdf
     featured: no
+    
   - authors:
       - family: Coquand
         given: Thierry
@@ -209,6 +227,7 @@ papers:
     volume: 76
     featured: no
     tags:
+      - Theory and Implementation of Rocq
       - Foundations
     abstract: >
       The calculus of constructions is a higher-order formalism for constructive proofs in natural deduction style. Every proof is a A-expression, typed
@@ -223,6 +242,7 @@ papers:
       arbitrarily complex algorithmic specifications. We develop the basic theory of a 
       calculus of constructions, and prove a strong normalization theorem showing that all
       computations terminate. Finally, we suggest various extensions to stronger calculi.
+      
   - abstract: Type Classes have met a large success in Haskell and
       Isabelle, as a solution for sharing notations by overloading and for
       specifying with abstract structures by quantification on contexts.
@@ -240,6 +260,8 @@ papers:
       given: Matthieu
     - family: Oury
       given: Nicolas
+    tags:
+      - Theory and Implementation of Rocq
     collection-title: LNCS
     container-title: TPHOLs
     doi: 10.1007/978-3-540-71067-7_23
@@ -281,10 +303,12 @@ papers:
     type: article-journal
     url: "https://nantes-universite.hal.science/hal-04801739"
     tags:
+      - Theory and Implementation of Rocq
       - POPL
       - Universes
     abstract: >
       Proof assistants based on dependent type theory, such as Coq, Lean and Agda, use different universes to classify types, typically combining a predicative hierarchy of universes for computationally-relevant types, and an impredicative universe of proof-irrelevant propositions. In general, a universe is characterized by its sort, such as Type or Prop, and its level, in the case of a predicative sort. Recent research has also highlighted the potential of introducing more sorts in the type theory of the proof assistant as a structuring means to address the coexistence of different logical or computational principles, such as univalence, exceptions, or definitional proof irrelevance. This diversity raises concrete and subtle issues from both theoretical and practical perspectives. In particular, in order to avoid duplicating definitions to inhabit all (combinations of) universes, some sort of polymorphism is needed. Universe level polymorphism is well-known and effective to deal with hierarchies, but the handling of polymorphism between sorts is currently ad hoc and limited in all major proof assistants, hampering reuse and extensibility. This work develops sort polymorphism and its metatheory, studying in particular monomorphization, large elimination, and parametricity. We implement sort polymorphism in Coq and present examples from a new sort-polymorphic prelude of basic definitions and automation. Sort polymorphism is a natural solution that effectively addresses the limitations of current approaches and prepares the ground for future multi-sorted type theories.
+  
   - abstract: Motivated by applications to proof assistants based on
       dependent types, we develop and prove correct a strong reducer and
       β-equivalence checker for the λ-calculus with
@@ -301,6 +325,8 @@ papers:
       given: Benjamin
     - family: Leroy
       given: Xavier
+    tags:
+      - Theory and Implementation of Rocq
     container-title: International Conference on Functional Programming
     id: Gregoire-Leroy-02
     issued: 2002
@@ -310,9 +336,12 @@ papers:
     type: paper-conference
     url: "http://pauillac.inria.fr/\\~xleroy/publi/strong-reduction.pdf"
     doi: 10.1145/581478.581501
+  
   - author:
     - family: Dénès
       given: Maxime
+    tags:
+      - Theory and Implementation of Rocq
     id: "denes:tel-00945775"
     issued: 2013
     month: 11
@@ -323,9 +352,13 @@ papers:
     title: "Étude formelle d'algorithmes efficaces en algèbre linéaire"
     type: thesis
     url: "https://theses.hal.science/tel-00945775"
+
   - author:
     - family: Letouzey
       given: Pierre
+    tags: 
+      - Theory and Implementation of Rocq
+      - Extraction
     genre: Thèse de Doctorat
     id: LetouzeyPhd
     issued: 2004
@@ -335,6 +368,7 @@ papers:
     title-short: Programmation fonctionnelle certifiée
     type: thesis
     url: "http://www.pps.jussieu.fr/~letouzey/download/these_letouzey.pdf"
+
   - author: 
     - family: Timany
       given: Amin
@@ -355,9 +389,11 @@ papers:
     url: "https://doi.org/10.4230/LIPIcs.FSCD.2018.29"
     volume: 108
     tags: 
+      - Theory and Implementation of Rocq
       - PCUIC
     abstract: >
       In order to avoid well-known paradoxes associated with self-referential definitions, higher-order dependent type theories stratify the theory using a countably infinite hierarchy of universes (also known as sorts), Type_0 : Type_1 : *s. Such type systems are called cumulative if for any type A we have that A : Type_i implies A : Type_{i+1}. The Predicative Calculus of Inductive Constructions (pCIC) which forms the basis of the Coq proof assistant, is one such system. In this paper we present the Predicative Calculus of Cumulative Inductive Constructions (pCuIC) which extends the cumulativity relation to inductive types. We discuss cumulative inductive types as present in Coq 8.7 and their application to formalization and definitional translations.
+  
   - author:
     - family: Martin-Löf
       given: Per
@@ -367,9 +403,11 @@ papers:
     publisher: University of Stockholm
     url: https://archive-pml.github.io/martin-lof/pdfs/An-Intuitionistic-Theory-of-Types-1972.pdf
     tags:
+      - Theory and Implementation of Rocq
       - MLTT
     abstract: >
       The theory of types with which we shall be concerned is intended to be a full scale system for formalizing intuitionistic mathematics as developed, for example, in the book by Bishop 1967. The language of the theory is richer than the language of first order predicate logic. This makes it possible to strengthen the axioms for existence and disjunction. In the case of existence, the possibility of strengthening the usual elimination rule seems first to have been indicated by Howard 1969, whose proposed axioms are special cases of the existential elimination rule of the present theory. Furthermore, there is a reflection principle which links the generation of objects and types and plays somewhat the same role for the present theory as does the replacement axiom for Zermelo-Fraenkel set theory. An earlier, not yet conclusive, attempt at formulating a theory of this kind was made by Scott 1970. Also related, although less closely, are the type and logic free theories of constructions of Kreisel 1962 and 1965 and Goodman 1970. In its first version, the present theory was based on the strongly impredicative axiom that there is a type of all types whatsoever, which is at the same time a type and an object of that type. This axiom had to be abandoned, however, after it was shown to lead to a contradiction by Jean Yves Girard. I am very grateful to him for showing me his paradox. The change that it necessitated is so drastic that my theory no longer contains intuitionistic simple type theory as it originally did. Instead, its proof theoretic strength should be close to that of predicative analysis.      
+  
   - author:
     - family: Girard
       given: J.-Y.
@@ -382,6 +420,9 @@ papers:
       l'arithmétique d'ordre supérieur
     type: thesis
     url: https://girard.perso.math.cnrs.fr/These.pdf
+    tags:
+      - Theory and Implementation of Rocq
+
   - author:
     - family: Whitehead
       given: Alfred North
@@ -390,6 +431,9 @@ papers:
     issued: 1910
     publisher: Cambridge University Press
     title: Principia Mathematica
+    tags:
+      - Theory and Implementation of Rocq
+
   - author:
     - family: Paulin-Mohring
       given: Christine
@@ -401,6 +445,9 @@ papers:
       (Program extraction in the calculus of constructions)
     type: thesis
     url: "https://tel.archives-ouvertes.fr/tel-00431825"
+    tags: 
+      - Theory and Implementation of Rocq
+
   - author:
     - family: Paulin-Mohring
       given: Christine
@@ -415,6 +462,9 @@ papers:
     doi: 10.1145/75277.75285
     abstract: >
       We define in this paper a notion of realizability for the Calculus of Constructions. The extracted programs are terms of the Calculus that do not contain dependent types. We introduce a distinction between informative and non-informative propositions. This distinction allows the removal of the “logical” part in the development of a program. We show also how to use our notion of realizability in order to interpret various axioms like the axiom of choice or the induction on integers. A practical example of development of program is given in the appendix.
+    tags:
+      - Theory and Implementation of Rocq
+
   - author:
     - family: Herbelin
       given: Hugo
@@ -426,6 +476,9 @@ papers:
     url: "http://pauillac.inria.fr/\\~herbelin/publis/univalgcci.pdf"
     abstract: >
       We describe an algebraic system of universes and a typechecking algorithm for universe constraints in a version of the extended calculus of constructions with inductive types. The use of algebraic universes ensures that the graph of constraints only contains universes already present in the term to type. This algorithm, used in the typechecker of the Coq proof assistant, refines Huet and Harper-Pollack algorithms for typical ambiguity.
+    tags:
+      - Theory and Implementation of Rocq
+
   - author:
     - family: Huet
       given: Gérard
@@ -435,6 +488,8 @@ papers:
     abstract: >
       The Calculus of Constructions is a higher-order formalism for writing constructive proofs in a natural deduction style, inspired from work of de Bruijn, Girard and Martin-Löf. The calculus and its syntactic theory were presented in Coquand’s thesis, and an implementation by the author was used to mechanically verify a substantial number of proofs demonstrating the power of expression of the formalism. The Calculus of Constructions is proposed as a foundation for the design of programming environments where programs are developed consistently with formal specifications.
     url: https://pauillac.inria.fr/~huet/PUBLIC/typtyp.pdf
+    tags: 
+      - Theory and Implementation of Rocq
 
   - author:
     - family: Coquand
@@ -445,3 +500,5 @@ papers:
     abstract: >
       On propose une synthèse de différents systèmes de types: la théorie des types de Martin-Löf, le calcul d'ordre supérieur de Girard, et le calcul automath de De Bruijn. Le résultat fondamental de ce travail est une preuve de cohérence du calcul ainsi obtenu (la théorie des constructions). D'après les résultats de Girard, ce système a la puissance d'expression de l'arithmétique d'ordre supérieure. Les exemples développes sont de deux ordres: en logique (on retrouve les différents systèmes logiques connus) et en informatique (le type étant alors la spécification du programme)
     url: https://theses.fr/1985PA07F126
+    tags: 
+      - Theory and Implementation of Rocq
