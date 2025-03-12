@@ -20,7 +20,7 @@ let package_docs req =
   Dream.redirect req (Url.Package.documentation package)
 
 let opam req =
-  Dream.redirect req ("https://coq.github.io/" ^ Dream.target req)
+  Dream.redirect req ("https://rocq-prover.github.io/" ^ Dream.target req)
 
 let t =
   Dream.scope "" []
