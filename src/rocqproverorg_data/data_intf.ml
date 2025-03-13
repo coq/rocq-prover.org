@@ -518,7 +518,7 @@ module Release = struct
   let github_of_kind = function 
   | `Compiler -> "https://github.com/ocaml/ocaml", id
   | `Coq -> "https://github.com/coq/coq", (fun x -> "V" ^ x)
-  | `Rocq -> "https://github.com/coq/coq", (fun x -> "V" ^ x)
+  | `Rocq -> "https://github.com/rocq-prover/rocq-prover", (fun x -> "V" ^ x)
   | `CoqPlatform -> "https://github.com/coq/platform", id
   | `RocqPlatform -> "https://github.com/rocq-prover/platform", id
 
