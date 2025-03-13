@@ -332,7 +332,7 @@
     license: https://spdx.org/licenses/LGPL-2.1-only.html
     synopsis:  The Coq Proof Assistant, XML protocol server
     description: >
-      Coq is a formal proof management system. It providesa formal language to write mathematical definitions, executablealgorithms and theorems together with an environment forsemi-interactive development of machine-checked proofs.This package provides the `coqidetop` language server, animplementation of Coq'apos;s [XML protocol](https://github.com/coq/coq/blob/master/dev/doc/xml-protocol.md)which allows clients, such as CoqIDE, to interact with Coq in astructured way.
+      Coq is a formal proof management system. It providesa formal language to write mathematical definitions, executablealgorithms and theorems together with an environment forsemi-interactive development of machine-checked proofs.This package provides the `coqidetop` language server, animplementation of Coq'apos;s [XML protocol](https://github.com/rocq-prover/rocq-prover/blob/master/dev/doc/xml-protocol.md)which allows clients, such as CoqIDE, to interact with Coq in astructured way.
     lifecycle: dependency
   - name: cppo.1.7.0
     source: https://github.com/ocaml-community/cppo
