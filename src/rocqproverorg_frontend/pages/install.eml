@@ -76,7 +76,7 @@ Layout.render
           </li>
 
         </ol>
-        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Linux.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
 
         <h3>
           Using Opam
@@ -113,7 +113,7 @@ Layout.render
         <ul>
           <li>
             <p>
-            <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+            <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
             It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
             and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
             To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
@@ -140,7 +140,7 @@ hybrid Rocq/markdown document support.
             </p>
           </li>
           <li>
-            <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. Linux distributions that have the Rocq Prover usually also install the RocqIDE server in their main package. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+            <a href="https://github.com/rocq-prover-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. Linux distributions that have the Rocq Prover usually also install the RocqIDE server in their main package. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
         </ul>
         <h3>
           Emacs
@@ -191,7 +191,7 @@ hybrid Rocq/markdown document support.
           </li>
         </ol>
         <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
-        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_macOS.md#installation-by-compiling-from-sources-using-opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         <h3>
           Using Homebrew
         </h3>
@@ -235,7 +235,7 @@ hybrid Rocq/markdown document support.
         <ul>
           <li>
             <p>
-            <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+            <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
             It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
             and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
             To use it, you need to install the corresponding language server. Using opam, you can install it with the following command:
@@ -262,7 +262,7 @@ hybrid Rocq/markdown document support.
             </p>
           </li>
           <li>
-            <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+            <a href="https://github.com/rocq-prover-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol and therefore does not require installing a language server. You can install VsCoq Legacy from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
           </li>
         </ul>
         <h3>
@@ -314,7 +314,7 @@ hybrid Rocq/markdown document support.
           </li>
         </ol>
         <a class="btn mt-6 gap-2" href="<%s Url.release latest_platform_version %>#recommended-binary-installers">Download the Rocq Platform binary installer<%s! Icons.arrow_small_right "h-6 w-6" %></a>
-        <a class="btn mt-6 gap-2" href="https://github.com/coq/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
+        <a class="btn mt-6 gap-2" href="https://github.com/rocq-prover/platform/blob/<%s latest_platform_version %>/doc/README_Windows.md#installation-by-compiling-from-sources-using-scripts--opam">Run the Rocq Platform scripts<%s! Icons.arrow_small_right "h-6 w-6" %></a>
         <h3>
           Using Opam
         </h3>
@@ -341,7 +341,7 @@ hybrid Rocq/markdown document support.
         </h3>
         <ul>
           <li>
-            <a href="https://github.com/coq/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
+            <a href="https://github.com/rocq-prover/vscoq">VsRocq</a> is the official Rocq extension for Visual Studio Code.
             It is available in the <a href="https://marketplace.visualstudio.com/items?itemName=maximedenes.vsrocq">Visual Studio Code Marketplace</a>
             and on <a href="https://open-vsx.org/extension/maximedenes/vsrocq">Open VSX</a>.
             To use it, you need the corresponding language server, which is distributed with the Rocq Platform starting from version 2025.01.
@@ -353,7 +353,7 @@ hybrid Rocq/markdown document support.
             </p>
           </li>
           <li>
-            <a href="https://github.com/coq-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
+            <a href="https://github.com/rocq-prover-community/vscoq-legacy/">VsCoq Legacy</a> is a legacy Rocq extension for Visual Studio Code that only relies on the RocqIDE protocol. You can install it from the <a href="https://marketplace.visualstudio.com/items?itemName=coq-community.vscoq1">Visual Studio Code Marketplace</a> or from <a href="https://open-vsx.org/extension/coq-community/vscoq1">Open VSX</a>.
           </li>
           <li>
             If you have used WSL to install the Rocq Prover, then you can use the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">WSL</a> VS Code extension to use a language server running in WSL. In this case, follow the instructions for Linux on how to install the language server.
