@@ -33,7 +33,7 @@ Community_layout.single_column_layout
                 <%s!  Hero_section.hero_button ~left_icon:(Icons.discourse "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<strong>Share announcements</strong> on") ~text:("Discourse") ~href:("https://discourse.rocq-prover.org/") "" %>
                </div>
                <div class="flex lg:flex-row mt-8 mr-4">
-                <%s!  Hero_section.hero_button ~left_icon:(Icons.github "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<strong>Collaborate</strong> in") ~text:("Rocq-community") ~href:("https://github.com/coq-community/manifesto") "" %>
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.github "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<strong>Collaborate</strong> in") ~text:("Rocq-community") ~href:("https://github.com/rocq-prover-community/manifesto") "" %>
                </div>
                <!-- <div class="flex lg:flex-row mt-8 mr-4">
                 <%s!  Hero_section.hero_button ~left_icon:(Icons.peertube "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~extra_html:("<b>Watch</b>") ~text:("Rocq Videos") ~href:("https://watch.ocaml.org/") "" %>
@@ -58,7 +58,7 @@ Community_layout.single_column_layout
       <ul>
         <p class="text-title dark:text-dark-title text-xl font-mono mb-2">Development</p>
         <%s! social_list_item ~text:("Submit bug reports and feature requests for the Rocq Prover - ") ~href:("https://github.com/rocq-prover/rocq/issues") ~left_icon:(Icons.github "w-10 h-10") ~title:("GitHub") "" %>
-        <%s! social_list_item ~text:("Participate in the collaborative maintenance of ecosystem packages - ") ~href:("https://github.com/coq-community/manifesto") ~left_icon:(Icons.github "w-10 h-10") ~title:("Rocq-community") "" %>
+        <%s! social_list_item ~text:("Participate in the collaborative maintenance of ecosystem packages - ") ~href:("https://github.com/rocq-prover-community/manifesto") ~left_icon:(Icons.github "w-10 h-10") ~title:("Rocq-community") "" %>
       </ul>
       <!-- 
       <ul>
