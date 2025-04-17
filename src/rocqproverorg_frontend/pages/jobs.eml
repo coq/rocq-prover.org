@@ -10,9 +10,17 @@ Rocq community."
         <div class="w-full m-auto">
             <h1 class="text-title dark:text-dark-title font-bold mb-2">Rocq Job Board</h1>
             <p class="text-content dark:text-dark-content text-xl lg:max-w-[80%]">This is a space where groups, companies, and organisations can advertise their projects directly to the
-                Rocq community.</p>
-               <div class="flex lg:flex-row mt-8 mr-4 max-w-[230px]">
-                <%s!  Hero_section.hero_button ~left_icon:(Icons.edit "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~text:("Add a Job Offer") ~href:("https://github.com/rocq-prover/rocq.org/blob/main/CONTRIBUTING.md#content-job") "" %>
+                Rocq community. Some additional offers may be available on the Rocq Discourse forum and Zulip chat.</p>
+               <div class="lg:flex-row flex-col flex w-full md:max-w-[70%]">
+                <div class="flex lg:flex-row mt-8 mr-4">
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.edit "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~text:("Add a Job Offer") ~href:("https://github.com/rocq-prover/rocq-prover.org/blob/main/CONTRIBUTING.md#content-job") "" %>
+                </div>
+                <div class="flex lg:flex-row mt-8 mr-4">
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.discourse "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~text:("Job announcements on Discourse") ~href:("https://discourse.rocq-prover.org/tag/jobs") "" %>
+                </div>
+                <div class="flex lg:flex-row mt-8 mr-4">
+                <%s!  Hero_section.hero_button ~left_icon:(Icons.zulip "w-6 h-6") ~right_icon:(Icons.link "w-5 h-5") ~text:("Job announcements on Zulip") ~href:("https://rocq-prover.zulipchat.com/#narrow/channel/432274-Jobs") "" %>
+                </div>
                </div> 
         </div>
     </div>
