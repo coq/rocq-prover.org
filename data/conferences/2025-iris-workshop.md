@@ -8,7 +8,7 @@ important_dates:
   - date: 2025-06-02
     info: Workshop
 presentations: []
-organising_committee: []
+organising_committee:
   - name: Jacques-Henri Jourdan
     affiliation: CNRS
   - name: François Pottier
